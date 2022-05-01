@@ -1,3 +1,4 @@
+
 package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
@@ -96,6 +97,7 @@ class MovieManagerTest {
         manager.addMovie(eleven);
         Movies[] expected = {eleven, ten, nine, eight, seven, six, five, four, three, two};
         Movies[] actual = manager.findLast();
+
         assertArrayEquals(expected, actual);
     }
 
@@ -108,8 +110,10 @@ class MovieManagerTest {
         manager.addMovie(four);
         manager.addMovie(five);
         manager.addMovie(six);
+
         Movies[] expected = {six, five, four, three, two};
         Movies[] actual = manager.findLast();
+
         assertArrayEquals(expected, actual);
     }
 }
